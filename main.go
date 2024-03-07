@@ -14,6 +14,7 @@ func main() {
 
 	// router.HandleFunc("/login", controllers.Login).Methods("POST")
 	// test
+	// test2
 
 	http.Handle("/", router)
 	fmt.Println("Connected to port 8888")
