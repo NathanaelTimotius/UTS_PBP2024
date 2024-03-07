@@ -13,6 +13,7 @@ func main() {
 	router := mux.NewRouter()
 
 	// router.HandleFunc("/login", controllers.Login).Methods("POST")
+	// test
 
 	http.Handle("/", router)
 	fmt.Println("Connected to port 8888")
