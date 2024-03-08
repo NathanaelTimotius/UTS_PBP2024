@@ -1,6 +1,7 @@
 package main
 
 import (
+	"UTS/controllers"
 	"fmt"
 	"log"
 	"net/http"
@@ -12,9 +13,10 @@ import (
 func main() {
 	router := mux.NewRouter()
 
-	// router.HandleFunc("/login", controllers.Login).Methods("POST")
-	// test
-	// test2
+	router.HandleFunc("/rooms", controllers.GetAllRooms).Methods("GET")
+	router.HandleFunc("/detailrooms", controllers.GetDetailRoom).Methods("GET")
+	router.HandleFunc("/rooms", controllers.InsertRoom).Methods("POST")
+	router.HandleFunc("/rooms", controllers.LeaveRoom).Methods("DELETE")
 
 	http.Handle("/", router)
 	fmt.Println("Connected to port 8888")
